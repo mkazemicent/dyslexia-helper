@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include('partials/head', { title: 'Spelling Practice' }) %>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Dyslexia Helper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyslexia Helper</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Linking to the stylesheet -->
 </head>
 <body>
-  <h1>Welcome to Dyslexia Helper</h1>
-  <p>This is the beginning of a great journey!</p>
+    <%- include('partials/header') %> <!-- Including the header partial -->
+    
+    <h1>Welcome to Dyslexia Helper</h1>
+    <p>Practice your spelling here!</p>
+    
+    <%- include('partials/footer') %> <!-- Including the footer partial -->
 </body>
 </html>

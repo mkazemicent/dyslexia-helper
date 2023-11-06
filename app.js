@@ -3,6 +3,9 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Set up middleware for parsing JSON bodies
+app.use(express.json()); // This should come before any routes are handled
+
 // View Engine Setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -16,6 +19,8 @@ app.use('/', indexRouter);
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
+  // You need to define createError or import it if you haven't already
+  const createError = require('http-errors');
   next(createError(404));
 });
 

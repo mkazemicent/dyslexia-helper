@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', { title: 'Spelling Practice' }) %>
+<head>
+    <title>Spelling Practice</title>
+</head>
+<body>
+    <%- include('partials/header') %> 
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Spelling Practice</h1>
+                <h2 class="text-muted" id="word"><%= word %></h2>
+                <p class="text-muted" id="definition"><%= definition %></p>                <button class="btn btn-primary" id="speak">Hear the Word</button>
+                <div class="input-group mt-3">
+                    <input type="text" id="userInput" class="form-control" placeholder="Spell the word here">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" id="check">Check Spelling</button>
+                    </div>
+                </div>
+                <p id="result" class="mt-3"></p>
+                <button class="btn btn-secondary mt-3" id="nextWord">Next Word</button>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %> 
+    <script src="/js/main.js"></script>
+</body>
+</html>
